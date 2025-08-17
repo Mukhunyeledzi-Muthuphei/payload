@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
-    "build:azure": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "build:azure": "npm install --legacy-peer-deps && cross-env NODE_OPTIONS=--no-deprecation next build",
     "postbuild": "next-sitemap --config next-sitemap.config.cjs",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
     "dev:prod": "cross-env NODE_OPTIONS=--no-deprecation rm -rf .next && pnpm build && pnpm start",
@@ -31,7 +31,7 @@
     "@payloadcms/plugin-form-builder": "3.52.0",
     "@payloadcms/plugin-nested-docs": "3.52.0",
     "@payloadcms/plugin-redirects": "3.52.0",
-    "@payloadcms/plugin-search": "3.52.0",
+    "@payloadcms/plugin-search": "^3.52.0",
     "@payloadcms/plugin-seo": "3.52.0",
     "@payloadcms/richtext-lexical": "3.52.0",
     "@payloadcms/ui": "3.52.0",
